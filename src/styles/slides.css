@@ -1,0 +1,96 @@
+#slider {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  padding: var(--nav-h) var(--slide-px) var(--slide-py);
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.slide.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Base grid — all share this */
+.gridslide {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  gap: 64px;
+  align-items: center;
+  position: relative;
+}
+
+/* Two equal columns */
+.gridslide-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Left heavy: content left, visual right */
+.gridslide-lh {
+  grid-template-columns: 3fr 2fr;
+}
+
+/* Right heavy: visual left, content right */
+.gridslide-rh {
+  grid-template-columns: 2fr 3fr;
+}
+
+/* Full width single column (quote slide) */
+.gridslide-1 {
+  grid-template-columns: 1fr;
+}
+
+/* Packages — single column, full bleed */
+.gridslide-pkg {
+  grid-template-columns: 1fr;
+}
+
+.ghost-number {
+  position: absolute;
+  right: -0.02em;
+  bottom: -0.25em;
+  font-family: var(--f-display);
+  font-size: clamp(120px, 16vw, 210px);
+  font-weight: 900;
+  font-style: italic;
+  color: rgba(77, 159, 236, 0.04);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  user-select: none;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: -1;
+}
+
+/* ── REVEAL SYSTEM ───────────────────────────────────────── */
+/*
+   Elements with class .r start hidden.
+   JavaScript adds transitions and restores them with a stagger.
+   This keeps animation logic in JS while CSS handles the
+   initial hidden state for progressive enhancement.
+*/
+.r {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+#s5 .pkg-header {
+  margin-bottom: 40px;
+}
+
+#s8 .contact-panel {
+  height: 100%;
+  min-height: 320px;
+}
