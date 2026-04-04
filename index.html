@@ -1,215 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Myriad Evo</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Myriad Evo — Growth-focused digital agency helping small businesses build, launch, and scale their online presence." />
+  <meta property="og:title" content="Myriad Evo — Growth Agency" />
+  <meta property="og:description" content="We build things that grow. Digital infrastructure for ambitious small businesses." />
+  <meta property="og:type" content="website" />
+  <title>Myriad Evo — Growth Agency</title>
 
-    <link rel="stylesheet" href="./vendor/swiper.css" />
-    <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./styles/slider.css" />
-    <link rel="stylesheet" href="./styles/services.css" />
-    <link rel="stylesheet" href="./styles/layout.css" />
-  </head>
+  <!-- Preconnect for font performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Outfit:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
 
-  <body>
-    <section id="hero" class="hero-section">
-      <div class="swiper evo-swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide" style="--bg-color:#051f20;">
-            <!-- <div class="slide-inner"> -->
-              <!-- <div class="bg-layer"></div> -->
+  <link rel="stylesheet" href="src/styles/tokens.css" />
+  <link rel="stylesheet" href="src/styles/base.css" />
+  <link rel="stylesheet" href="src/styles/components.css" />
+  <link rel="stylesheet" href="src/styles/slides.css" />
+  <link rel="stylesheet" href="src/styles/responsive.css" />
+</head>
+<body>
 
-              <div class="content">
-                <p class="tag">MYRIAD EVO</p>
+  <!-- CURSOR -->
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
 
-                <h1 class="title">
-                  WE BUILD SYSTEMS THAT GROW BUSINESSES
-                </h1>
+  <!-- GLOBAL OVERLAYS -->
+  <div id="noise" aria-hidden="true"></div>
+  <div id="glow" aria-hidden="true"></div>
+  <div id="progress-bar" role="progressbar" aria-label="Page progress"></div>
 
-                <p class="desc">
-                  We help small businesses launch, scale, and operate through
-                  structured digital systems.
-                </p>
-
-                <a href="#services" class="cta-btn">Discover More</a>
-              </div>
-            <!-- </div> -->
-          </div>
-
-          <!-- Slide 2 -->
-          <div class="swiper-slide" style="--bg-color:#0b2b26;">
-            <!-- <div class="slide-inner">
-              <div class="bg-layer"></div> -->
-
-              <div class="content">
-                <p class="tag">SERVICES</p>
-
-                <h1 class="title">
-                  LAUNCH YOUR BUSINESS
-                </h1>
-
-                <p class="desc">
-                  Websites, CRM systems, SEO, and Google tools — everything you
-                  need to get online and start attracting clients.
-                </p>
-
-                <a href="#services" class="cta-btn">View Services</a>
-              </div>
-            <!-- </div> -->
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="swiper-slide" style="--bg-color:#163832;">
-            <!-- <div class="slide-inner"> -->
-              <!-- <div class="bg-layer"></div> -->
-
-              <div class="content">
-                <p class="tag">SOLUTIONS</p>
-
-                <h1 class="title">
-                  SCALE WITH SMART SYSTEMS
-                </h1>
-
-                <p class="desc">
-                  Subscription-based tools designed to automate operations and
-                  support long-term growth.
-                </p>
-
-                <a href="#solutions" class="cta-btn">See Solutions</a>
-              </div>
-            <!-- </div> -->
-          </div>
-
-          <!-- Slide 4 -->
-          <div class="swiper-slide" style="--bg-color:#051f20;">
-            <!-- <div class="slide-inner"> -->
-              <!-- <div class="bg-layer"></div> -->
-
-              <div class="content">
-                <p class="tag">START NOW</p>
-
-                <h1 class="title">
-                  LET’S BUILD YOUR SYSTEM
-                </h1>
-
-                <p class="desc">
-                  Partner with us to create a digital system that drives
-                  visibility, engagement, and sales.
-                </p>
-
-                <a href="#cta" class="cta-btn primary">Contact Us</a>
-              </div>
-            <!-- </div> -->
-          </div>
-        </div>
-
-        <!-- Navigation -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-
-        <!-- Progress -->
-        <div class="swiper-pagination"></div>
+  <!-- NAV -->
+  <nav id="nav" role="navigation" aria-label="Site navigation">
+    <div class="nav-logo" aria-label="Myriad Evo">
+      Myriad <em>Evo</em>
+    </div>
+    <div class="nav-right">
+      <div class="nav-counter" aria-live="polite" aria-label="Slide position">
+        <b id="nc">01</b> / <span id="nt">08</span>
       </div>
-    </section>
+      <a class="nav-cta" href="mailto:khanetmoi@gmail.com">Start a project</a>
+    </div>
+  </nav>
 
-    <!-- SERVICES -->
-    <section id="services" class="section services">
-      <div class="section-header">
-        <p class="section-tag">SERVICES</p>
-        <h2>Launch Your Business</h2>
-        <p class="section-subtext">
-          Everything you need to establish a strong digital presence and start
-          attracting customers.
-        </p>
-      </div>
+  <!--SIDE DOTS -->
+  <div id="dots" role="tablist" aria-label="Slide navigation"></div>
 
-      <div class="service-grid">
-        <div class="service-card">
-          <h3>Website Development</h3>
-          <p>
-            We design and build modern, responsive websites that turn visitors
-            into paying customers.
+  <!-- ARROW BUTTONS -->
+  <div id="arrows" aria-label="Slide controls">
+    <button class="arrow" id="ap" aria-label="Previous slide">↑</button>
+    <button class="arrow" id="an" aria-label="Next slide">↓</button>
+  </div>
+
+  <!--SCROLL HINT -->
+  <div id="hint" aria-hidden="true">Scroll to navigate</div>
+
+
+  <main id="slider" aria-label="Main content">
+
+    <!-- 01 HERO -->
+    <section class="slide" id="s1" data-index="0" aria-label="Hero">
+      <div class="gridslide gridslide-lh">
+        <div class="ghost-number" aria-hidden="true">01</div>
+        <div>
+          <div class="kicker r">Growth Agency — Est. 2024</div>
+          <h1 class="r">We build<br /><em>things</em><br />that grow.</h1>
+          <div class="rule r"></div>
+          <p class="body-text r">
+            Myriad Evo is a <strong>growth-focused digital agency</strong> for small
+            businesses ready to move fast. We turn ambition into presence — online
+            visibility, intelligent systems, and the infrastructure to scale.
           </p>
-          <ul>
-            <li>Landing pages</li>
-            <li>Multi-page websites</li>
-            <li>Mobile-first design</li>
-          </ul>
         </div>
-
-        <div class="service-card">
-          <h3>CRM Systems</h3>
-          <p>
-            Manage your leads, track clients, and automate your business
-            processes with structured systems.
-          </p>
-          <ul>
-            <li>Lead tracking</li>
-            <li>Client management</li>
-            <li>Workflow automation</li>
-          </ul>
-        </div>
-
-        <div class="service-card">
-          <h3>Google Business & Ads</h3>
-          <p>
-            Get discovered by customers actively searching for your services and
-            drive targeted traffic.
-          </p>
-          <ul>
-            <li>Profile setup</li>
-            <li>Optimization</li>
-            <li>Ad campaigns</li>
-          </ul>
-        </div>
-
-        <div class="service-card">
-          <h3>SEO Optimization</h3>
-          <p>
-            Improve your visibility on search engines and position your business
-            for long-term growth.
-          </p>
-          <ul>
-            <li>On-page optimization</li>
-            <li>Structure improvements</li>
-            <li>Search visibility</li>
-          </ul>
+        <div class="stat-col r">
+          <div>
+            <div class="stat-val">3<em>+</em></div>
+            <div class="stat-lbl">Service layers</div>
+          </div>
+          <div>
+            <div class="stat-val">$300</div>
+            <div class="stat-lbl">Starting investment</div>
+          </div>
+          <div>
+            <div class="stat-val">∞</div>
+            <div class="stat-lbl">Room to scale</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- SOLUTIONS -->
-    <section id="solutions" class="section">
-      <h2>Scale with Systems</h2>
-      <p>Subscription-based tools designed for growth.</p>
+    <!-- 02 THE PROBLEM -->
+    <section class="slide" id="s2" data-index="1" aria-label="Our perspective">
+      <div class="gridslide gridslide-1">
+        <div class="ghost-number" aria-hidden="true">02</div>
+        <div class="quote-wrap">
+          <span class="quote-mark r" aria-hidden="true">"</span>
+          <p class="big-q r">
+            Most small businesses are <em>invisible</em> online — not because they
+            lack quality, but because no one built them a proper system to be found.
+          </p>
+          <p class="quote-sub r">
+            We change that. Myriad Evo gives every business — local or international —
+            the digital infrastructure that used to cost ten times more and take ten
+            times longer to build.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <!-- PACKAGES -->
-    <section id="packages" class="section">
-      <h2>Simple Pricing</h2>
+    <!-- 03 SERVICES -->
+    <section class="slide" id="s3" data-index="2" aria-label="Services">
+      <div class="gridslide gridslide-lh">
+        <div class="ghost-number" aria-hidden="true">03</div>
+        <div>
+          <div class="kicker r">What We Do</div>
+          <h2 class="r">The core<br /><em>services.</em></h2>
+          <p class="body-text r">
+            Everything a business needs to get found, get customers, and stay
+            organised. No filler, no fluff — just the tools that move the needle.
+          </p>
+        </div>
+        <div class="svc-grid r">
+          <div class="svc">
+            <span class="svc-icon" aria-hidden="true">◻</span>
+            <h4>Web Development</h4>
+            <p>Landing pages &amp; multi-page sites built to convert. Fast, responsive, precise.</p>
+          </div>
+          <div class="svc">
+            <span class="svc-icon" aria-hidden="true">◎</span>
+            <h4>CRM Setup</h4>
+            <p>Lead tracking, client management &amp; workflow automation in one clean system.</p>
+          </div>
+          <div class="svc">
+            <span class="svc-icon" aria-hidden="true">◈</span>
+            <h4>Google Business &amp; Ads</h4>
+            <p>Profile optimisation, local visibility, and ad campaigns with real returns.</p>
+          </div>
+          <div class="svc">
+            <span class="svc-icon" aria-hidden="true">◉</span>
+            <h4>SEO Optimisation</h4>
+            <p>On-page structure, keyword alignment, and long-term search presence.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- PROCESS -->
-    <section id="process" class="section">
-      <h2>How We Work</h2>
+    <!-- 04 SOLUTIONS -->
+    <section class="slide" id="s4" data-index="3" aria-label="Solutions">
+      <div class="gridslide gridslide-rh">
+        <div class="ghost-number" aria-hidden="true">04</div>
+        <div>
+          <div class="kicker r">The Product Layer</div>
+          <h2 class="r">Beyond<br /><em>services.</em></h2>
+          <p class="body-text r">
+            We don't just build for you — we build <strong>systems you subscribe to</strong>.
+            Proprietary tools designed for entire industry verticals. Lower cost,
+            higher leverage, lasting impact.
+          </p>
+          <div class="rule r"></div>
+          <p class="body-text r" style="font-size:13px;margin-top:0;">
+            Starting from <strong style="color:var(--accent)">$15 / month</strong>
+          </p>
+        </div>
+        <div class="sol-stack r">
+          <div class="sol">
+            <div class="sol-badge">Live</div>
+            <h4>Local Venue System</h4>
+            <p>A complete digital infrastructure for restaurants and local venues.
+              Bookings, menus, visibility — fully managed and always on.</p>
+            <div class="sol-price">Setup $0 – $100 &nbsp;·&nbsp; $20 – $50 / month</div>
+          </div>
+          <div class="sol">
+            <div class="sol-badge">Available</div>
+            <h4>Restaurant Web App</h4>
+            <p>A dedicated web application for restaurant operations — orders,
+              menus, and customer engagement in one place.</p>
+            <div class="sol-price">Setup $50 – $150 &nbsp;·&nbsp; $15 – $40 / month</div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <h2>Projects & Partners</h2>
+    <!-- 05 PACKAGES -->
+    <section class="slide" id="s5" data-index="4" aria-label="Packages and pricing">
+      <div class="gridslide gridslide-pkg">
+        <div class="ghost-number" aria-hidden="true">05</div>
+        <div class="pkg-header">
+          <div class="kicker r">Choose Your Entry Point</div>
+          <h2 class="r">Simple<br /><em>packages.</em></h2>
+        </div>
+        <div class="pkg-wrap r">
+          <div class="pkg">
+            <div class="pkg-tier">Starter</div>
+            <div class="pkg-price">$300<sub> one-time</sub></div>
+            <div class="pkg-div"></div>
+            <ul>
+              <li>1-page website</li>
+              <li>Mobile-responsive design</li>
+              <li>Basic SEO setup</li>
+              <li>Google Business Profile</li>
+            </ul>
+            <a class="pkg-action" href="mailto:khanetmoi@gmail.com">Get started →</a>
+          </div>
+          <div class="pkg featured">
+            <div class="pkg-tier">Growth</div>
+            <div class="pkg-price">$500<sub> one-time</sub></div>
+            <div class="pkg-div"></div>
+            <ul>
+              <li class="hi">Everything in Starter</li>
+              <li class="hi">Multi-page website</li>
+              <li class="hi">CRM system integration</li>
+              <li class="hi">SEO optimisation</li>
+              <li>Google Ads setup</li>
+            </ul>
+            <a class="pkg-action" href="mailto:khanetmoi@gmail.com">Most recommended →</a>
+          </div>
+          <div class="pkg">
+            <div class="pkg-tier">Pro</div>
+            <div class="pkg-price">$900<sub>+</sub></div>
+            <div class="pkg-div"></div>
+            <ul>
+              <li>Everything in Growth</li>
+              <li>Advanced customisation</li>
+              <li>Google Ads management</li>
+              <li>Priority support</li>
+              <li>Ongoing maintenance</li>
+            </ul>
+            <a class="pkg-action" href="mailto:khanetmoi@gmail.com">Let's talk →</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="cta" class="section">
-      <h2>Let’s Build Your System</h2>
-      <a href="#" class="cta-btn">Contact Us</a>
+    <!-- 06 PROCESS -->
+    <section class="slide" id="s6" data-index="5" aria-label="Our process">
+      <div class="gridslide gridslide-2">
+        <div class="ghost-number" aria-hidden="true">06</div>
+        <div>
+          <div class="kicker r">How It Works</div>
+          <h2 class="r">No<br /><em>confusion.</em></h2>
+          <p class="body-text r">
+            A clear, repeatable process designed to get you live fast and scale from
+            there. WhatsApp or email — we work around you.
+          </p>
+        </div>
+        <div class="steps r">
+          <div class="step">
+            <div class="step-n">01</div>
+            <div>
+              <h4>Discovery</h4>
+              <p>We learn your business, goals, and gaps. No lengthy forms — just a real conversation.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-n">02</div>
+            <div>
+              <h4>Proposal</h4>
+              <p>A clear package recommendation with price and timeline. No ambiguity, no surprises.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-n">03</div>
+            <div>
+              <h4>Build</h4>
+              <p>50% upfront, we start immediately. Progress updates throughout.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-n">04</div>
+            <div>
+              <h4>Delivery &amp; Scale</h4>
+              <p>Review, refine, and launch. Then we identify what adds next — hosting, ads, solutions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Scripts -->
-    <script src="./vendor/swiper.js"></script>
+    <!-- 07 PARTNERS -->
+    <section class="slide" id="s7" data-index="6" aria-label="Partners and work">
+      <div class="gridslide gridslide-lh">
+        <div class="ghost-number" aria-hidden="true">07</div>
+        <div>
+          <div class="kicker r">In The Field</div>
+          <h2 class="r">Real work.<br /><em>Real results.</em></h2>
+          <p class="body-text r">
+            We don't promise — we deliver. Every project is a reference point we stand
+            behind fully. Small team, high standards, no outsourcing.
+          </p>
+          <div class="rule r"></div>
+          <p class="body-text r" style="font-size:15px;margin-top:0;">
+            Working with <strong>international small businesses</strong>, online-first
+            brands, and local operators who understand that the right digital foundation
+            changes everything.
+          </p>
+        </div>
+        <div class="partner-box r">
+          <div class="partner-row">
+            <div class="p-dot"></div>
+            <div class="p-name">myUniFinders</div>
+            <div class="p-tag">Education Platform</div>
+          </div>
+          <div class="partner-row">
+            <div class="p-dot dim"></div>
+            <div class="p-name dim">Your business</div>
+            <div class="p-tag">Next →</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script src="./src/js/slider.js"></script>
-    <script src="./src/js/navigation.js"></script>
-    <script src="./src/js/main.js"></script>
-    <script src="./src/js/interactions.js"></script>
-  </body>
+    <!-- 08 CONTACT -->
+    <section class="slide" id="s8" data-index="7" aria-label="Contact">
+      <div class="gridslide gridslide-2">
+        <div class="ghost-number" aria-hidden="true">08</div>
+        <div>
+          <div class="kicker r">Ready to Move</div>
+          <div class="cta-big r">
+            Let's<br />build<br /><em>yours.</em>
+          </div>
+          <div class="cta-links r">
+            <a class="cta-a" href="mailto:hello@myriadevo.com">
+              <span class="cta-a-line" aria-hidden="true"></span>khanetmoi@gmail.com
+            </a>
+            <a class="cta-a" href="https://wa.me/yournumber" target="_blank" rel="noopener noreferrer">
+              <span class="cta-a-line" aria-hidden="true"></span>WhatsApp us directly
+            </a>
+          </div>
+        </div>
+        <div class="contact-panel r">
+          <div class="kicker">What to expect</div>
+          <div class="expect-list">
+            <div class="expect-item">
+              <span class="expect-icon" aria-hidden="true">→</span>
+              <div>
+                <h4>Fast response</h4>
+                <p>We reply within hours, not days. Business moves fast — so do we.</p>
+              </div>
+            </div>
+            <div class="expect-item">
+              <span class="expect-icon" aria-hidden="true">→</span>
+              <div>
+                <h4>No jargon</h4>
+                <p>Clear communication at every stage. You always know where things stand.</p>
+              </div>
+            </div>
+            <div class="expect-item">
+              <span class="expect-icon" aria-hidden="true">→</span>
+              <div>
+                <h4>Growth-first thinking</h4>
+                <p>Every decision is made with your long-term scale in mind.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SCRIPTS -->
+  <script type="module" src="src/js/main.js"></script>
+
+</body>
 </html>
