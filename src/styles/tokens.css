@@ -1,11 +1,11 @@
 :root {
-  --bg-ink: #05080f;
-  --bg-deep: #090d1a;
+  --bg-ink: #1c2839;
+  --bg-deep: #071018;
   --bg-navy: #0d1528;
   --bg-slate: #131e35;
   --bg-mid: #1a2744;
 
-  --accent: #4d9fec;
+  --accent: #90e0ef;
   --accent-dim: rgba(77, 159, 236, 0.12);
   --accent-glow: rgba(77, 159, 236, 0.28);
   --accent-line: rgba(77, 159, 236, 0.5);

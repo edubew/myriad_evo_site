@@ -36,8 +36,8 @@ button {
   cursor: none;
 }
 
-#cur,
-#cur-ring {
+#cursor,
+#cursor-ring {
   position: fixed;
   pointer-events: none;
   z-index: 9999;
@@ -46,7 +46,7 @@ button {
   will-change: left, top;
 }
 
-#cur {
+#cursor {
   width: 7px;
   height: 7px;
   background: var(--accent);
@@ -54,7 +54,7 @@ button {
   mix-blend-mode: screen;
 }
 
-#cur-ring {
+#cursor-ring {
   width: 30px;
   height: 30px;
   border: 1px solid var(--accent-line);
@@ -137,7 +137,7 @@ body.hovering #cur-ring {
 
 .nav-logo {
   font-family: var(--f-display);
-  font-size: 17px;
+  font-size: 30px;
   font-weight: 700;
   color: var(--text);
   letter-spacing: 0.01em;
@@ -150,7 +150,7 @@ body.hovering #cur-ring {
 .nav-logo em {
   font-style: italic;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 22px;
   color: var(--accent);
 }
 
@@ -162,7 +162,7 @@ body.hovering #cur-ring {
 
 .nav-counter {
   font-family: var(--f-mono);
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 0.2em;
   color: var(--dimmed);
   user-select: none;
@@ -204,8 +204,8 @@ body.hovering #cur-ring {
 }
 
 .dot {
-  width: 3px;
-  height: 3px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: var(--dimmed);
   cursor: pointer;
@@ -230,7 +230,7 @@ body.hovering #cur-ring {
   gap: 10px;
 }
 
-.arr {
+.arrow {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -240,19 +240,19 @@ body.hovering #cur-ring {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 16px;
   transition: border-color 0.25s, color 0.25s, background 0.25s;
   user-select: none;
   line-height: 1;
 }
 
-.arr:hover {
+.arrow:hover {
   border-color: var(--accent);
   color: var(--accent);
   background: var(--accent-dim);
 }
 
-.arr:disabled {
+.arrow:disabled {
   opacity: 0.2;
   pointer-events: none;
 }
@@ -263,7 +263,7 @@ body.hovering #cur-ring {
   left: var(--slide-px);
   z-index: 200;
   font-family: var(--f-mono);
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--dimmed);
